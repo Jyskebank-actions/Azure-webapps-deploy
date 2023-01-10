@@ -36,7 +36,7 @@ export async function main() {
     // Validate action inputs
     let validator = await ValidatorFactory.getValidator(type);
     await validator.validate();
-    core.debug(ActionParameters.getActionParams());
+    core.debug("rg" + ActionParameters.getActionParams().resourceGroupName);
     var deploymentProvider = DeploymentProviderFactory.getDeploymentProvider(type);
     
     core.debug("Predeployment Step Started");
